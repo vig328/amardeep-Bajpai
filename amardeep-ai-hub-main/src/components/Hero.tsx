@@ -21,17 +21,19 @@ export default function Hero() {
           
           {/* Content Column */}
           <div className="flex flex-col items-start text-left">
-            {/* Badge: Added mt-6 to bring it down, hover:bg-same to disable highlight */}
             <Badge
               className="mt-6 mb-8 bg-[#EEF2FF] hover:bg-[#EEF2FF] text-[#6366F1] border-[#E0E7FF] px-5 py-2 rounded-full text-sm font-semibold tracking-wide cursor-default transition-none"
             >
               🚀 AI & Digital Transformation Leader | Entrepreneur | Educator
             </Badge>
 
-            <h1 className="text-5xl lg:text-7xl font-extrabold mb-8 text-[#111827] leading-[1.1]">
+            {/* Adjusted Typography to match image scale and weight */}
+            <h1 className="text-5xl md:text-6xl lg:text-[80px] font-black mb-10 text-[#111827] leading-[1.0] tracking-[-0.04em]">
               Amardeep Bajpai <br />
-              <span className="text-[#6366F1]">
-                Transforming Innovation into Business Growth
+              <span className="text-[#6366F1] block mt-1">
+                Transforming <br className="hidden md:block" />
+                Innovation into <br className="hidden md:block" />
+                Business Growth
               </span>
             </h1>
 
@@ -91,7 +93,6 @@ export default function Hero() {
                   </Button>
                 }
               />
-              {/* Explore Services Button: Removed hover:bg-[#F9FAFB] to keep it static */}
               <Button 
                 variant="outline" 
                 size="lg" 
