@@ -30,23 +30,16 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo Section - Professional "AB" Symbol + Text */}
+          {/* --- ENLARGED LOGO SECTION --- */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-3 group">
-              {/* The "AB" Symbol Box */}
-              <div className="bg-black text-white font-black text-xl px-2 py-1 rounded-sm flex items-center justify-center leading-none">
-                AB
-              </div>
-              
-              {/* The Branding Text */}
-              <div className="flex flex-col leading-none">
-                <span className="text-black text-lg font-black tracking-tighter uppercase">
-                  Amardeep Bajpai
-                </span>
-                <span className="text-black/80 text-[10px] font-bold tracking-[0.15em] uppercase mt-1">
-                  AI & Digital
-                </span>
-              </div>
+            <Link to="/" className="flex items-center group relative">
+              <img 
+                src="https://i.ibb.co/WvFNdHRC/AB-logo-PNG-Transp.png" 
+                alt="Amardeep Bajpai Logo" 
+                /* Increased from h-14 to h-28 for maximum clarity */
+                /* Added translate-y to center the overhang visually */
+                className="h-28 w-auto object-contain drop-shadow-2xl transition-all duration-300 group-hover:scale-110 translate-y-2"
+              />
             </Link>
           </div>
 
@@ -57,7 +50,7 @@ export default function Header() {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-sm font-semibold transition-colors",
+                  "text-sm font-bold uppercase tracking-wider transition-colors",
                   location.pathname === item.href
                     ? "text-yellow-400"
                     : "text-white hover:text-yellow-200"
@@ -69,7 +62,7 @@ export default function Header() {
             <BookingForm
               trigger={
                 <Button
-                  className="bg-[#FFD700] text-blue-900 font-bold hover:bg-yellow-400 rounded-md px-5 py-2 shadow-sm transition-transform active:scale-95"
+                  className="bg-[#FFD700] text-blue-900 font-black hover:bg-yellow-400 rounded-md px-6 py-2 shadow-lg transition-transform active:scale-95"
                 >
                   Book Consultation
                 </Button>
