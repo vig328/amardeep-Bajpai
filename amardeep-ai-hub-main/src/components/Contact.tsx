@@ -153,82 +153,61 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6">
-            We would love to hear from you!
+    <section id="contact" className="py-24 bg-[#F8FAFF]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        {/* Header matching your Black/Bold style */}
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-6 text-[#111827] leading-tight tracking-tighter">
+            We would love to <span className="text-[#6366F1]">hear from you!</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed">
+          <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed font-medium">
             Connect with Amardeep Bajpai for consulting, workshops, or speaking
-            engagements.
-            <br />
-            Reach out today and explore opportunities in AI, digital strategy,
-            and business transformation with one of India’s leading innovators.
+            engagements. Reach out today and explore opportunities in AI and digital strategy.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form Section */}
-          <div className="bg-card rounded-2xl p-8 shadow-soft">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-              <div className="flex items-center gap-3">
-                <MessageCircle className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold">
-                  Send a Message
-                </h3>
-              </div>
-              <h4 className="text-base font-medium text-muted-foreground">
-                We are here to help you with services
-              </h4>
+          <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100">
+            <div className="flex items-center gap-3 mb-8">
+              <MessageCircle className="h-6 w-6 text-[#6366F1]" />
+              <h3 className="text-2xl font-black text-[#111827] tracking-tight">
+                Send a Message
+              </h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="firstName" className="block text-sm font-bold mb-2 text-gray-700">
                     First Name *
                   </label>
                   <Input
                     id="firstName"
                     value={formData.firstName}
-                    onChange={(e) =>
-                      handleInputChange("firstName", e.target.value)
-                    }
+                    onChange={(e) => handleInputChange("firstName", e.target.value)}
                     placeholder="Your first name"
-                    className="w-full"
+                    className="w-full rounded-xl border-gray-200 focus:border-[#6366F1] focus:ring-[#6366F1]"
                     required
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="lastName" className="block text-sm font-bold mb-2 text-gray-700">
                     Last Name *
                   </label>
                   <Input
                     id="lastName"
                     value={formData.lastName}
-                    onChange={(e) =>
-                      handleInputChange("lastName", e.target.value)
-                    }
+                    onChange={(e) => handleInputChange("lastName", e.target.value)}
                     placeholder="Your last name"
-                    className="w-full"
+                    className="w-full rounded-xl border-gray-200 focus:border-[#6366F1] focus:ring-[#6366F1]"
                     required
                   />
                 </div>
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="email" className="block text-sm font-bold mb-2 text-gray-700">
                   Email Address *
                 </label>
                 <Input
@@ -237,16 +216,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
                   placeholder="your.email@company.com"
-                  className="w-full"
+                  className="w-full rounded-xl border-gray-200"
                   required
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="company"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="company" className="block text-sm font-bold mb-2 text-gray-700">
                   Company (Optional)
                 </label>
                 <Input
@@ -254,15 +230,12 @@ export default function Contact() {
                   value={formData.company}
                   onChange={(e) => handleInputChange("company", e.target.value)}
                   placeholder="Your company name"
-                  className="w-full"
+                  className="w-full rounded-xl border-gray-200"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="subject" className="block text-sm font-bold mb-2 text-gray-700">
                   Subject
                 </label>
                 <Input
@@ -270,15 +243,12 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={(e) => handleInputChange("subject", e.target.value)}
                   placeholder="What would you like to discuss?"
-                  className="w-full"
+                  className="w-full rounded-xl border-gray-200"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="message" className="block text-sm font-bold mb-2 text-gray-700">
                   Message *
                 </label>
                 <Textarea
@@ -287,30 +257,29 @@ export default function Contact() {
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Write your message..."
                   rows={6}
-                  className="w-full"
+                  className="w-full rounded-xl border-gray-200"
                   required
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full group">
+              <Button type="submit" size="lg" className="w-full bg-[#111827] hover:bg-black text-white rounded-xl font-bold py-6 transition-all group">
                 Send Message
                 <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
 
-            {/* Book a Consultation Section (Moved Below Form) */}
-            <div className="bg-gradient-primary rounded-2xl p-8 mt-8 text-primary-foreground text-center shadow-md">
-              <Calendar className="h-8 w-8 mb-4 mx-auto" />
-              <h3 className="text-xl font-heading font-semibold mb-3">
-                Book a Consultation or Speaking Session
+            {/* Book a Consultation Section */}
+            <div className="bg-[#6366F1] rounded-[1.5rem] p-8 mt-8 text-white text-center shadow-xl">
+              <Calendar className="h-8 w-8 mb-4 mx-auto text-white" />
+              <h3 className="text-xl font-black mb-3 tracking-tight">
+                Book a Consultation
               </h3>
-              <p className="mb-6 opacity-90 text-base">
-                Connect directly with Amardeep Bajpai for AI consulting,
-                digital strategy sessions, or leadership workshops.
+              <p className="mb-6 opacity-90 text-sm font-medium">
+                Connect directly for AI consulting, digital strategy, or leadership workshops.
               </p>
               <BookingForm
                 trigger={
-                  <Button variant="secondary" size="lg" className="w-full group">
+                  <Button variant="secondary" size="lg" className="w-full bg-white text-[#6366F1] hover:bg-gray-100 rounded-xl font-black shadow-lg group">
                     Schedule a Call
                     <Calendar className="ml-2 h-4 w-4" />
                   </Button>
@@ -320,31 +289,27 @@ export default function Contact() {
           </div>
 
           {/* Contact Info + Methods */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {contactMethods.map((method, index) => (
-                <Card key={index} className="hover-lift cursor-pointer group">
+                <Card key={index} className="border-none shadow-sm hover:shadow-md transition-all duration-300 rounded-3xl bg-white group">
                   <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                      <method.icon className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#6366F1]/10 transition-colors">
+                      <method.icon className="h-6 w-6 text-[#6366F1]" />
                     </div>
-                    <h4 className="font-heading font-semibold mb-2">
+                    <h4 className="font-black text-[#111827] mb-1 tracking-tight">
                       {method.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-3">
+                    <p className="text-xs font-bold text-gray-400 mb-4 truncate px-2">
                       {method.description}
                     </p>
                     <Button
                       variant="outline"
                       size="sm"
-                      className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      className="rounded-full border-gray-100 font-bold hover:bg-[#6366F1] hover:text-white hover:border-[#6366F1] transition-all px-6"
                       asChild
                     >
-                      <a
-                        href={method.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={method.href} target="_blank" rel="noopener noreferrer">
                         {method.action}
                       </a>
                     </Button>
@@ -353,11 +318,10 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="bg-muted/50 rounded-lg p-6 text-center">
-              <h4 className="font-heading font-semibold mb-2">Response Time</h4>
-              <p className="text-sm text-muted-foreground">
-                All inquiries are typically answered within 24 hours. For urgent
-                matters, please call directly.
+            <div className="bg-white/50 backdrop-blur-sm border border-gray-100 rounded-3xl p-6 text-center">
+              <h4 className="font-black text-[#111827] mb-2">Response Time</h4>
+              <p className="text-sm font-bold text-gray-400">
+                All inquiries are typically answered within 24 hours.
               </p>
             </div>
           </div>
