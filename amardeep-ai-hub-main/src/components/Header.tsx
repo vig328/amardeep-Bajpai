@@ -38,7 +38,7 @@ export default function Header() {
               <img 
                 src={logo} 
                 alt="Amardeep Bajpai Logo" 
-                className="h-[70px] w-auto object-contain drop-shadow-lg transition-all duration-300 group-hover:scale-105"
+                className="h-[36px] w-auto object-contain drop-shadow-lg transition-all duration-300 group-hover:scale-105"
               />
             </Link>
           </div>
