@@ -16,28 +16,27 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Content Column */}
           <div className="flex flex-col items-start text-left">
+            
             <Badge
-              className="mt-6 mb-8 bg-[#EEF2FF] hover:bg-[#EEF2FF] text-[#6366F1] border-[#E0E7FF] px-5 py-2 rounded-full text-sm font-semibold tracking-wide cursor-default transition-none"
+              className="mt-4 mb-6 bg-[#EEF2FF] text-black border-[#E0E7FF] px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide"
             >
               🚀 AI & Digital Transformation Leader | Entrepreneur | Educator
             </Badge>
 
-            {/* Adjusted Typography to match image scale and weight */}
-            <h1 className="text-5xl md:text-6xl lg:text-[80px] font-black mb-10 text-[#111827] leading-[1.0] tracking-[-0.04em]">
-              Amardeep Bajpai <br />
-              <span className="text-[#6366F1] block mt-1">
-                Transforming <br className="hidden md:block" />
-                Innovation into <br className="hidden md:block" />
-                Business Growth
+            {/* Responsive Typography */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-black mb-6 text-[#111827] leading-tight tracking-tight">
+              Amardeep Bajpai
+              <span className="text-[#6366F1] block mt-2">
+                Transforming Innovation into Business Growth
               </span>
             </h1>
 
-            <div className="text-lg text-[#4B5563] leading-relaxed max-w-2xl mb-2">
+            <div className="text-base sm:text-lg text-[#4B5563] leading-relaxed max-w-xl mb-2">
               <p className="mb-4">
                 With over 15 years of experience in AI, digital transformation,
                 entrepreneurship, e-commerce, marketing, and strategy consulting,
@@ -48,55 +47,59 @@ export default function Hero() {
               {showMore && (
                 <div className="space-y-4 animate-in fade-in slide-in-from-top-4 duration-700">
                   <p>
-                    As the Founder & CEO of Webisdom, Amardeep has built one of
-                    India’s leading digital transformation companies, serving clients
-                    such as Domino’s, IFB Appliances, MakeMyTrip, and Tata.
+                    Founder & CEO of Webisdom, serving brands like Domino’s,
+                    IFB Appliances, MakeMyTrip, and Tata.
                   </p>
                   <p>
-                    Beyond entrepreneurship, Amardeep serves as a Visiting Professor
-                    at MDI Gurgaon and IMT Ghaziabad, mentoring professionals in e-commerce
-                    strategy and branding.
+                    Visiting Professor at MDI Gurgaon and IMT Ghaziabad,
+                    mentoring professionals in e-commerce strategy and branding.
                   </p>
                 </div>
               )}
             </div>
 
             <button
-              className="mb-10 text-[#6366F1] font-bold text-sm flex items-center gap-1 hover:text-[#4F46E5] transition-colors"
+              className="mb-8 text-[#6366F1] font-bold text-sm flex items-center gap-1 hover:text-[#4F46E5] transition-colors"
               onClick={() => setShowMore(!showMore)}
             >
               {showMore ? "Read Less ↑" : "Read More ↓"}
             </button>
 
             {/* Stats Section */}
-            <div className="flex flex-wrap gap-8 mb-12 border-t border-gray-100 pt-8 w-full">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-wrap gap-6 mb-10 border-t border-gray-100 pt-6 w-full">
+              <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-[#6366F1]" />
-                <span className="text-xs font-bold text-[#374151] uppercase tracking-widest">15+ Years Exp.</span>
+                <span className="text-xs font-bold text-[#374151] uppercase tracking-wider">
+                  15+ Years Exp.
+                </span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-[#6366F1]" />
-                <span className="text-xs font-bold text-[#374151] uppercase tracking-widest">300+ Brands</span>
+                <span className="text-xs font-bold text-[#374151] uppercase tracking-wider">
+                  300+ Brands
+                </span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-[#6366F1]" />
-                <span className="text-xs font-bold text-[#374151] uppercase tracking-widest">5 Unicorns Scaled</span>
+                <span className="text-xs font-bold text-[#374151] uppercase tracking-wider">
+                  5 Unicorns Scaled
+                </span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <BookingForm
                 trigger={
-                  <Button size="lg" className="bg-[#4F46E5] hover:bg-[#3730A3] text-white rounded-xl px-10 py-7 text-lg font-bold shadow-xl shadow-indigo-100 group transition-all">
+                  <Button className="bg-[#4F46E5] hover:bg-[#3730A3] text-white rounded-xl px-6 py-4 text-base font-bold shadow-lg w-full sm:w-auto">
                     Book Consultation
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 }
               />
               <Button 
                 variant="outline" 
-                size="lg" 
-                className="rounded-xl px-10 py-7 text-lg font-bold border-2 border-[#E5E7EB] bg-white text-[#111827] hover:bg-white hover:text-[#111827] transition-none" 
+                className="rounded-xl px-6 py-4 text-base font-bold border-2 border-[#E5E7EB] bg-white text-[#111827] w-full sm:w-auto"
                 asChild
               >
                 <Link to="/services">Explore Services</Link>
@@ -105,19 +108,15 @@ export default function Hero() {
           </div>
 
           {/* Image Column */}
-          <div className="relative w-full flex justify-center lg:justify-end items-center">
-            <div className="relative w-full max-w-[550px] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.01]">
+          <div className="relative w-full flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
+            <div className="relative w-full max-w-[400px] sm:max-w-[480px] lg:max-w-[550px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
               <img
                 src={heroImage}
                 alt="Amardeep Bajpai"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF]/60 via-transparent to-transparent z-10"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF]/50 via-transparent to-transparent"></div>
             </div>
-            
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-indigo-300/20 blur-[100px] rounded-full -z-10"></div>
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-300/20 blur-[100px] rounded-full -z-10"></div>
           </div>
 
         </div>
