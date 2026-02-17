@@ -183,7 +183,7 @@ const galleryItems = [
     category: "Education",
     date: "2025",
     location: "Indore, India",
-    imageUrl: "https://zygomorphic-rose-2wgt5e4kom.edgeone.app/WhatsApp%20Image%202026-02-13%20at%203.43.02%20PM.jpeg",
+    imageUrl: "https://able-gray-3r8ofcjkgg.edgeone.app/WhatsApp%20Image%202026-02-13%20at%203.43.02%20PM%20(1).jpeg",
     attendees: "Students & Faculty",
   },
   {
