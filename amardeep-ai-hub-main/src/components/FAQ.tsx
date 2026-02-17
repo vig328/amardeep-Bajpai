@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import BookingForm from "./BookingForm";
@@ -65,7 +64,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24">
+    <section id="faq" className="py-24 bg-slate-50/40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -85,7 +84,7 @@ export default function FAQ() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-[#004AAD] text-white rounded-2xl border border-transparent px-6 data-[state=open]:shadow-lg transition-all"
+                className="bg-[#004AAD] text-white rounded-2xl border border-transparent px-6 shadow-md hover:shadow-xl data-[state=open]:shadow-2xl data-[state=open]:-translate-y-1 transition-all duration-300"
               >
                 <AccordionTrigger className="text-left py-6 hover:no-underline text-white">
                   <span className="font-heading font-semibold text-lg sm:text-xl">
@@ -93,7 +92,7 @@ export default function FAQ() {
                   </span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 text-white/90">
-                  <p className="leading-relaxed text-base sm:text-lg">
+                  <p className="leading-relaxed text-base sm:text-lg border-t border-white/10 pt-4">
                     {faq.answer}
                   </p>
                 </AccordionContent>
@@ -102,27 +101,31 @@ export default function FAQ() {
           </Accordion>
 
           {/* CTA Section */}
-          <div className="mt-16 text-center">
-            <div className="bg-gradient-subtle rounded-2xl p-8 md:p-12 shadow-soft">
-              <MessageCircle className="h-12 w-12 text-primary mx-auto mb-6" />
-              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-4">
+          <div className="mt-20 text-center">
+            <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,74,173,0.15)] border border-slate-100 relative overflow-hidden group hover:shadow-[0_30px_60px_rgba(0,74,173,0.2)] transition-shadow duration-500">
+              {/* Decorative background shadow element */}
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#004AAD]/5 rounded-full blur-3xl group-hover:bg-[#004AAD]/10 transition-colors" />
+              
+              <MessageCircle className="h-14 w-14 text-[#004AAD] mx-auto mb-6" />
+              <h3 className="text-2xl sm:text-4xl font-heading font-bold mb-4">
                 Still Have Questions?
               </h3>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed text-base sm:text-lg">
+              <p className="text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed text-base sm:text-lg">
                 Don’t see your question answered here? Feel free to reach out for
                 personalized insights or schedule a one-on-one consultation to explore
                 how Amardeep can help transform your business.
               </p>
+              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <BookingForm
                   trigger={
-                    <Button size="lg" className="group">
+                    <Button size="lg" className="group bg-[#004AAD] hover:bg-[#003a8a] px-8 shadow-lg shadow-[#004AAD]/20 hover:shadow-[#004AAD]/40 transition-all duration-300">
                       Schedule a Call
-                      <MessageCircle className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <MessageCircle className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   }
                 />
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" asChild className="px-8 shadow-sm hover:shadow-md border-2 transition-all">
                   <Link to="/contact">Send Message</Link>
                 </Button>
               </div>
