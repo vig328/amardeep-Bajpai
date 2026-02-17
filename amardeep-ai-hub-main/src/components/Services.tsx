@@ -115,9 +115,13 @@ export default function Services() {
     <section id="services" className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-            Strategic <span className="text-gradient">Consulting Services</span>
-          </h2>
+          {/* Changed to leading-[1.4] to provide the specific vertical space shown in your screenshot */}
+          <h2 
+  className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6"
+  style={{ lineHeight: '1.4' }} // Force the space regardless of CSS settings
+>
+  Strategic <span className="text-gradient"> Consulting Services </span>
+</h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
             From business strategy to digital transformation, Amardeep Bajpai offers end-to-end 
             consulting solutions that help organizations innovate, scale, and achieve sustainable growth.
