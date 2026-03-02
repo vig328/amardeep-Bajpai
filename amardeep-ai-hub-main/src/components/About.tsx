@@ -35,7 +35,7 @@ export default function About() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* ===== Header Section ===== */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-[1.3]">
             About <span className="text-gradient">Amardeep Bajpai</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
@@ -54,7 +54,7 @@ export default function About() {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             {/* ===== Left Side: Biography ===== */}
             <div className="lg:w-1/2">
-              <h3 className="text-3xl font-heading font-extrabold mb-6">
+              <h3 className="text-3xl font-heading font-extrabold mb-6 leading-tight">
                 Career Highlights
               </h3>
               <div className="prose prose-lg text-white/90 space-y-4">
@@ -82,7 +82,7 @@ export default function About() {
                   company.
                 </p>
 
-                <h3 className="text-3xl font-heading font-extrabold mt-10">
+                <h3 className="text-3xl font-heading font-extrabold mt-10 leading-tight">
                   Academic Background
                 </h3>
                 <ul className="list-disc ml-6 space-y-2">
@@ -93,7 +93,7 @@ export default function About() {
                   <li>Schooling – K.V. Andrews Ganj, New Delhi</li>
                 </ul>
 
-                <h3 className="text-3xl font-heading font-extrabold mt-10">
+                <h3 className="text-3xl font-heading font-extrabold mt-10 leading-tight">
                   Academic Engagement
                 </h3>
                 <p className="text-lg leading-relaxed">
@@ -103,7 +103,7 @@ export default function About() {
                   marketing, and crisis management.
                 </p>
 
-                <h3 className="text-3xl font-heading font-extrabold mt-10">
+                <h3 className="text-3xl font-heading font-extrabold mt-10 leading-tight">
                   Professional Philosophy
                 </h3>
                 <p className="text-lg leading-relaxed">
@@ -133,7 +133,7 @@ export default function About() {
 
         {/* ===== Stats Section ===== */}
         <div className="bg-card rounded-2xl p-8 shadow-soft hover-lift mb-20">
-          <h3 className="text-3xl font-heading font-extrabold mb-6 text-center">
+          <h3 className="text-3xl font-heading font-extrabold mb-6 text-center leading-tight">
             Impact at a Glance
           </h3>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
@@ -156,7 +156,7 @@ export default function About() {
               </div>
             </div>
             <a
-              href="https://www.google.com/maps/place/Noida,+Uttar+Pradesh,+India"
+              href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:bg-primary/5 rounded-lg p-2 transition-colors group"
@@ -174,21 +174,21 @@ export default function About() {
 
         {/* ===== Mission, Vision, Values, Philosophy ===== */}
         <div>
-          <h3 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-center mb-12">
+          <h3 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-center mb-12 leading-[1.3]">
             Mission, Vision, Values &{" "}
             <span className="text-gradient">Philosophy</span>
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="hover-lift">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+              <Card key={index} className="hover-lift flex flex-col h-full">
+                <CardContent className="p-8 text-center flex flex-col items-center h-full">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                     <value.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-heading font-semibold text-lg mb-3">
+                  <h3 className="font-heading font-semibold text-xl mb-4">
                     {value.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify [text-justify:inter-word] hyphens-auto">
                     {value.description}
                   </p>
                 </CardContent>
