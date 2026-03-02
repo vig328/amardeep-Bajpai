@@ -43,7 +43,7 @@ const contactMethods = [
     title: "YouTube",
     description: "Amardeep",
     action: "Subscribe",
-    href: "https://youtube.com/@amardeepbajpai",
+    href: "https://www.youtube.com/@AmardeepBajpai-s7s",
   },
   {
     icon: Linkedin,
