@@ -52,7 +52,6 @@ export default function About() {
         {/* ===== Blue Background Section (Info + Image) ===== */}
         <div className="bg-[#002b6b] text-white rounded-2xl p-10 lg:p-14 mb-20">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
-            {/* ===== Left Side: Biography ===== */}
             <div className="lg:w-1/2">
               <h3 className="text-3xl font-heading font-extrabold mb-6 leading-tight">
                 Career Highlights
@@ -115,7 +114,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* ===== Right Side: Image ===== */}
             <div className="lg:w-1/2 flex justify-end">
               <div className="relative w-full max-w-lg">
                 <div className="absolute inset-0 bg-primary/30 rounded-2xl blur-xl opacity-25 animate-pulse-glow"></div>
@@ -181,14 +179,15 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <Card key={index} className="hover-lift flex flex-col h-full">
-                <CardContent className="p-8 text-center flex flex-col items-center h-full">
+                <CardContent className="p-8 flex flex-col items-center h-full">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                     <value.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-heading font-semibold text-xl mb-4">
+                  <h3 className="font-heading font-semibold text-xl mb-4 text-center">
                     {value.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed text-justify [text-justify:inter-word] hyphens-auto">
+                  {/* FIXED ALIGNMENT: Removed inter-word stretching, used hyphenation for clean block look */}
+                  <p className="text-sm text-muted-foreground leading-relaxed text-left hyphens-auto">
                     {value.description}
                   </p>
                 </CardContent>
