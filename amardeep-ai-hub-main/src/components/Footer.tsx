@@ -24,12 +24,13 @@ const footerLinks = {
   ],
   company: [
     { name: "About", href: "/about" },
+   // { name: "Projects", href: "/projects" },
     { name: "Media", href: "/media" },
     { name: "FAQ", href: "/faq" },
   ],
   resources: [
     { name: "Gallery", href: "/gallery" },
-    { name: "Case Studies", href: "/projects" },
+   // { name: "Case Studies", href: "/projects" },
     { name: "Contact", href: "/contact" },
     { name: "Services", href: "/services" },
   ],
