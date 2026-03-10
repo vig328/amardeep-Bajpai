@@ -63,7 +63,7 @@ const socialLinks = [
   },
   {
     icon: Youtube,
-    href: "https://youtube.com/@amardeepbajpai",
+    href: "https://www.youtube.com/@AmardeepBajpai-s7s",
     label: "YouTube",
     color: "#FF0000",
   },
