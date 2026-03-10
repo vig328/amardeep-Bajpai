@@ -41,7 +41,7 @@ const services = [
       "Performance Benchmarking",
       "Data-driven Decisions"
     ],
-    color: "secondary"
+    color: "primary"
   },
   {
     icon: Megaphone,
@@ -54,7 +54,7 @@ const services = [
       "Customer Engagement",
       "ROI Optimization"
     ],
-    color: "accent"
+    color: "primary"
   },
   {
     icon: Sparkles,
@@ -80,7 +80,7 @@ const services = [
       "AI Automation Planning",
       "Customer Experience Design"
     ],
-    color: "secondary"
+    color: "primary"
   },
   {
     icon: LineChart,
@@ -93,7 +93,7 @@ const services = [
       "Business Intelligence",
       "Marketing Optimization"
     ],
-    color: "accent"
+    color: "primary"
   },
   {
     icon: Brain,
