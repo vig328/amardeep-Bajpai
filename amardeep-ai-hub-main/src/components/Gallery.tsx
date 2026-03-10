@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { ZoomIn, Calendar, MapPin, Users } from "lucide-react";
+import { Calendar, MapPin, Users } from "lucide-react";
 
 const galleryItems = [
   {
@@ -211,7 +211,6 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-24 bg-[#F8FAFF]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-        {/* Section Heading matching Hero Typography */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-6 text-[#111827] leading-tight tracking-tighter">
             Moments from the <span className="text-[#6366F1]">Journey</span>
@@ -236,25 +235,24 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Uniform Grid - Fix for Cropping and Alignment */}
+        {/* Grid Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredItems.map((item) => (
             <Dialog key={item.id}>
               <DialogTrigger asChild>
                 <Card className="group cursor-pointer border-none shadow-sm hover:shadow-xl transition-all duration-500 rounded-[2rem] overflow-hidden bg-white flex flex-col h-full">
                   
-                  {/* PHOTO CONTAINER: The Fixed "Box" */}
-                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#F1F5F9] flex items-center justify-center">
-                    {/* object-contain ensures the FULL photo is visible regardless of its original shape */}
+                  {/* PHOTO CONTAINER: Full-bleed implementation */}
+                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#F1F5F9]">
                     <img
                       src={item.imageUrl}
                       alt={item.title}
-                      className="w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     
-                    {/* Badge Alignment Axis */}
+                    {/* Badge */}
                     <div className="absolute top-5 left-6 z-20">
-                      <Badge className="bg-[#111827] text-white border-none px-3 py-1 rounded-md text-[10px] font-black uppercase tracking-widest shadow-lg">
+                      <Badge className="bg-[#111827]/90 text-white border-none px-3 py-1 rounded-md text-[10px] font-black uppercase tracking-widest shadow-lg">
                         {item.category}
                       </Badge>
                     </div>
@@ -262,7 +260,7 @@ export default function Gallery() {
                     <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
 
-                  {/* CONTENT AREA: Aligned Text */}
+                  {/* Content */}
                   <CardContent className="p-6 flex flex-col flex-grow">
                     <h3 className="font-black text-xl mb-4 text-[#111827] leading-[1.2] tracking-tight group-hover:text-[#6366F1] transition-colors line-clamp-2 min-h-[2.4em]">
                       {item.title}
