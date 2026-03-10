@@ -13,7 +13,7 @@ const galleryItems = [
     category: "Event",
     date: "2025",
     location: "Mumbai, India",
-    imageUrl: "https://light-azure-1wpqme6nhh.edgeone.app/AB%20Global%20Fintech%20Festival%201.jpg",
+    imageUrl: "https://judicial-scarlet-mgmambgqfv.edgeone.app/AB%20sir%20mumbai.jpeg",
     attendees: "100,000+",
   },
   {
@@ -143,7 +143,7 @@ const galleryItems = [
     category: "Education",
     date: "2025",
     location: "Jaipur, India",
-    imageUrl: "https://minimal-plum-hccfxl2urk.edgeone.app/AB%20-%20AI.jpg",
+    imageUrl: "https://added-chocolate-lyzfouycok.edgeone.app/AB%20SIr%20AI%20Class.jpeg",
     attendees: "100+ students",
   },
   {
